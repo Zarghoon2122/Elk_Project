@@ -6,8 +6,6 @@ https://github.com/Zarghoon2122/Elk_Project/blob/master/Diagram/Diagram.JPG
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
-
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
@@ -22,7 +20,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly exist, in addition to restricting permission to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+-What aspect of security do load balancers protect? What is the advantage of a jump box?_
 Avalibilities and restrcition in the network. The Jump Box restricts the IP's access.  
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump Box and system System logs.
 - What does Filebeat watch for? It manages log files
@@ -46,13 +44,13 @@ Only the Host machine can accept connections from the Internet. Access to this m
 67.166.168.138
 
 Machines within the network can only be accessed by Jump Box.
-Which machine did you allow to access your ELK VM? Jump Box and Web-1 What was its IP address? 10.0.0.4 and 10.0.0.5
+Which machine did you allow to access your ELK VM? Web-1 and Web-b What was its IP address? 10.0.0.5 and 10.0.0.6
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box |        No           | 10.0.0.1 10.0.0.2    |
+| Jump Box |        No           | 10.0.0.5 10.0.0.6    |
 |          |                     |                      |
 |          |                     |                      |
 
@@ -63,8 +61,8 @@ What is the main advantage of automating configuration with Ansible?_
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+-  name: install filebeat deb
+   command: dpkg -i filebeat-7.4.0-amd64.d
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 https://github.com/Zarghoon2122/Elk_Project/blob/master/Diagram/Elk-PS.JPG
