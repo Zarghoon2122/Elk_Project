@@ -1,3 +1,11 @@
-ssh keygen
+ssh-keygen
+cat ~/etc/.ssh/id_rsa.pub
+ssh sysadmin@[IP Address]
+sudo docker container list -a [list container]
 sudo docker container [start container]
 sudo docker container attach [docker container]
+cd /etc/ansible
+ansible-playbook filebeat-playbook.yml
+nano ansible.cfg
+ansible-playbook /etc/ansible/web.yml
+ansible-playbook /etc/ansible/web.yml
